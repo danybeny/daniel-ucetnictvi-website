@@ -32,7 +32,7 @@ Volné_pozice = [
 def hello_daniel():
     return render_template('home.html',
                             Volné_pozice = Volné_pozice,
-                            company_name ='Daniel')
+                            company_name ='Martina')
 @app.route("/Volné_pozice")    
 def list_volne_pozice():          
     return jsonify(Volné_pozice) 
