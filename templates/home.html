@@ -10,6 +10,7 @@
         height: 360px;
         width: 100%;
         object-fit: cover;
+        margin-bottom:16px;
       }
     <style>
       h1{
@@ -38,27 +39,34 @@
     </style>
 
   <body>
-   
-    <div class="container">
-      <h1 class="text-center mt-2 mb-4">
-        {{company_name}} Účetnictví
-      </h1> 
+    {% include 'nav.html' %}
     <img class="img-fluid" id="banner" 
-    src="https://0f5b10c1-53c6-43ab-870e-5ddc610d00ac-00-2s1iv59ed23tw.spock.replit.dev/static/baner5.jpg" >, 
-    <h2 class="text-center mt-4 mb-4">O nás</h2>
+    src="https://0f5b10c1-53c6-43ab-870e-5ddc610d00ac-00-2s1iv59ed23tw.spock.replit.dev/static/baner5.jpg" > 
+      <div class="container">
+         <h1 class="text-center mt-2 mb-4">
+          {{company_name}} Účetnictví
+        </h1>
+          <div class="row" style="margin-bottom:16px">
+            <div class="col-md-6">
         <p class="lead">
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
      </p>
-      <h2 class="text-center mt-2 mb-4">Volné Pozice</h2>
-      <div style="margin-bottom:16px;">
+            </div>
+            <div class="d-none d-md-block col-md-6">
+      <img src="/static/people.jpg" 
+        style="height: 320px; border-radius:4px">
+        </div> 
+      <h2 class="text-center mt-4 mb-2">Volné Pozice</h2>
       <div>
          {%for Volné_pozice in Volné_pozice%}
-        {% include 'jobitem.html' %}
+        {% include 'volne_pozice_item.html' %}
         {%endfor%} 
       </div>  
       <div class="text-center">
-    <button class="btn btn-primary btn-lg">Kontaktuj nás</button>
-      <p class="mt-4"> Copyright 2024, Daniel</p>
+    <a class="btn btn-primary btn-lg"
+      href= "mailto:dbeniak77@gmail.com?subject=Dotaz%20na%20voln%C3%A9%20pozice&body=Jmenuji%20se%3A%20%3Cva%C5%A1e%20jm%C3%A9no%3E%0D%0AM%C5%AFj%20dotaz%3A%20%3Cvlo%C5%BEte%20stru%C4%8Dn%C4%9B%20v%C3%A1%C5%A1%20dotaz%3E" >Kontaktujte nás</a>
    </div>
+   </div>
+         {% include 'footer.html' %}
   </body>
 </html>
