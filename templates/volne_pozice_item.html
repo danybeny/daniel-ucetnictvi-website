@@ -2,19 +2,19 @@
   <div class="col-10">
     <h4
     style="color:rgb(120, 120, 120); margin-bottom:4px;">
-        {{ Volné_pozice ['title'] }}
+        {{ Volne_pozice ['title'] }}
       </h4>
     <div>
-      <b> Location:</b> {{ Volné_pozice ['location'] }}
+      <b> Location:</b> {{ Volne_pozice ['location'] }}
   </div>
-    {%if 'mzda' in Volné_pozice%} 
+    {%if 'mzda' in Volne_pozice%} 
   <div> 
-    <b> Mzda:</b>{{ Volné_pozice ['mzda']}}
+    <b> Mzda:</b>{{ Volne_pozice ['mzda']}}
   </div>
   {% endif %}
   </div>
   <div class="col-2 padding-right">
-    <a href="mailto:  mailto:daniel.beniak@email.cz?subject=Application%20for%20{{Volné_pozice['title']}}&body=My%20name%3A%20%3Cyour%20name%20here%3E%0D%0AMy%20Resume%20link%3A%20%3Cresume%20link%3E%0D%0AMy%20LinkedIn%3A%20%3Clinkedin%20in%3E" type="button"
+    <a href="mailto:  mailto:daniel.beniak@email.cz?subject=Application%20for%20{{Volne_pozice['title']}}&body=My%20name%3A%20%3Cyour%20name%20here%3E%0D%0AMy%20Resume%20link%3A%20%3Cresume%20link%3E%0D%0AMy%20LinkedIn%3A%20%3Clinkedin%20in%3E" type="button"
     class="btn btn-outline-primary float-right align-middle">Apply</a>  
 </div>
 </div>

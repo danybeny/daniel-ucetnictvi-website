@@ -1,7 +1,7 @@
 from flask import Flask, render_template,jsonify
 app = Flask(__name__)
 
-Volné_pozice = [
+Volne_pozice = [
       {
       'id': 1,
       'title': 'Datový analytik',
@@ -31,11 +31,11 @@ Volné_pozice = [
 @app.route("/")
 def hello_daniel():
     return render_template('home.html',
-                            Volné_pozice = Volné_pozice,
+                            Volne_pozice = Volne_pozice,
                             company_name ='Martina')
-@app.route("/Volné_pozice")    
+@app.route("/Volne_pozice")    
 def list_volne_pozice():          
-    return jsonify(Volné_pozice) 
+    return jsonify(Volne_pozice) 
 
 if __name__ == '__main__':
   app.run(host='0.0.0.0', debug=True)
